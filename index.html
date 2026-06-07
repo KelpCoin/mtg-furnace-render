@@ -14,109 +14,45 @@
     min-height: 100vh;
     overflow-x: hidden;
   }
-  /* Animated background particles */
-  .particles {
-    position: fixed; top:0; left:0; width:100%; height:100%;
-    z-index:0; pointer-events:none;
-  }
-  .particle {
-    position: absolute; background: rgba(255,217,102,0.15);
-    border-radius: 50%;
-    animation: float 15s infinite;
-  }
+  .particles { position: fixed; top:0; left:0; width:100%; height:100%; z-index:0; pointer-events:none; }
+  .particle { position: absolute; background: rgba(255,217,102,0.15); border-radius: 50%; animation: float 15s infinite; }
   @keyframes float {
     0% { transform: translateY(100vh) scale(0); opacity:0; }
-    20% { opacity:1; }
-    80% { opacity:1; }
+    20% { opacity:1; } 80% { opacity:1; }
     100% { transform: translateY(-10vh) scale(1); opacity:0; }
   }
-  .container {
-    position: relative; z-index:1;
-    max-width: 900px; margin:0 auto; padding: 4rem 2rem;
-  }
-  .hero {
-    text-align: center; margin-bottom: 3rem;
-  }
+  .container { position: relative; z-index:1; max-width: 900px; margin:0 auto; padding: 4rem 2rem; }
+  .hero { text-align: center; margin-bottom: 3rem; }
   .glow-text {
-    font-size: clamp(2.5rem, 8vw, 4.5rem);
-    font-weight: 800;
+    font-size: clamp(2.5rem, 8vw, 4.5rem); font-weight: 800;
     background: linear-gradient(135deg, #ffd966 0%, #ffb347 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    text-shadow: 0 0 40px rgba(255,217,102,0.3);
-    margin-bottom: 1rem;
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+    text-shadow: 0 0 40px rgba(255,217,102,0.3); margin-bottom: 1rem;
   }
-  .subtitle {
-    font-size: 1.2rem; color: #b0b0b0; max-width: 600px; margin:0 auto 2rem;
-    line-height: 1.6;
-  }
+  .subtitle { font-size: 1.2rem; color: #b0b0b0; max-width: 600px; margin:0 auto 2rem; line-height: 1.6; }
   .card {
-    background: rgba(255,255,255,0.03);
-    backdrop-filter: blur(20px);
-    border: 1px solid rgba(255,217,102,0.1);
-    border-radius: 24px;
-    padding: 3rem;
-    margin-bottom: 2rem;
-    text-align: center;
+    background: rgba(255,255,255,0.03); backdrop-filter: blur(20px);
+    border: 1px solid rgba(255,217,102,0.1); border-radius: 24px; padding: 3rem;
+    margin-bottom: 2rem; text-align: center;
     box-shadow: 0 25px 50px -12px rgba(0,0,0,0.5);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
   }
-  .card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 35px 60px -15px rgba(255,217,102,0.2);
-  }
-  .price-tag {
-    font-size: 3rem; font-weight: 800;
-    color: #ffd966; margin: 1.5rem 0;
-  }
+  .card:hover { transform: translateY(-5px); box-shadow: 0 35px 60px -15px rgba(255,217,102,0.2); }
+  .price-tag { font-size: 3rem; font-weight: 800; color: #ffd966; margin: 1.5rem 0; }
   .price-tag small { font-size: 1rem; color: #888; }
   .btn {
-    display: inline-block;
-    background: linear-gradient(135deg, #ffd966, #ffb347);
-    color: #000; font-weight: 700; font-size: 1.2rem;
-    padding: 1rem 3rem; border-radius: 50px;
-    text-decoration: none;
-    transition: all 0.3s ease;
-    box-shadow: 0 10px 30px rgba(255,217,102,0.4);
-    border: none; cursor: pointer;
-    letter-spacing: 0.5px;
+    display: inline-block; background: linear-gradient(135deg, #ffd966, #ffb347);
+    color: #000; font-weight: 700; font-size: 1.2rem; padding: 1rem 3rem;
+    border-radius: 50px; text-decoration: none; transition: all 0.3s ease;
+    box-shadow: 0 10px 30px rgba(255,217,102,0.4); border: none; cursor: pointer; letter-spacing: 0.5px;
   }
-  .btn:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 15px 40px rgba(255,217,102,0.6);
-  }
-  .trust-badges {
-    display: flex; justify-content: center; gap: 2rem; margin-top: 2rem;
-    flex-wrap: wrap;
-  }
-  .badge {
-    background: rgba(255,255,255,0.05);
-    padding: 0.8rem 1.5rem; border-radius: 50px;
-    font-size: 0.9rem; color: #ccc;
-    display: flex; align-items: center; gap: 0.5rem;
-  }
-  .badge::before { content:''; color:#ffd966; font-weight:bold; }
-  .social-proof {
-    display: flex; justify-content: center; gap: 1rem;
-    margin-top: 2rem; flex-wrap: wrap;
-  }
-  .avatar {
-    width: 40px; height: 40px; border-radius: 50%;
-    background: linear-gradient(135deg, #ffd966, #ffb347);
-    display: flex; align-items: center; justify-content: center;
-    font-weight: bold; color: #000;
-  }
-  .purchase-ticker {
-    position: fixed; bottom: 20px; left: 20px;
-    background: rgba(0,0,0,0.7); backdrop-filter: blur(10px);
-    padding: 0.8rem 1.2rem; border-radius: 12px;
-    font-size: 0.85rem; z-index: 10;
-    animation: slideIn 0.5s ease;
-  }
-  @keyframes slideIn {
-    from { transform: translateX(-100px); opacity:0; }
-    to { transform: translateX(0); opacity:1; }
-  }
+  .btn:hover { transform: translateY(-2px); box-shadow: 0 15px 40px rgba(255,217,102,0.6); }
+  .trust-badges { display: flex; justify-content: center; gap: 2rem; margin-top: 2rem; flex-wrap: wrap; }
+  .badge { background: rgba(255,255,255,0.05); padding: 0.8rem 1.5rem; border-radius: 50px; font-size: 0.9rem; color: #ccc; }
+  .social-proof { display: flex; justify-content: center; gap: 1rem; margin-top: 2rem; flex-wrap: wrap; }
+  .avatar { width: 40px; height: 40px; border-radius: 50%; background: linear-gradient(135deg, #ffd966, #ffb347); display: flex; align-items: center; justify-content: center; font-weight: bold; color: #000; }
+  .purchase-ticker { position: fixed; bottom: 20px; left: 20px; background: rgba(0,0,0,0.7); backdrop-filter: blur(10px); padding: 0.8rem 1.2rem; border-radius: 12px; font-size: 0.85rem; z-index: 10; animation: slideIn 0.5s ease; }
+  @keyframes slideIn { from { transform: translateX(-100px); opacity:0; } to { transform: translateX(0); opacity:1; } }
   footer { text-align: center; color: #555; margin-top: 3rem; font-size:0.85rem; }
 </style>
 </head>
@@ -139,10 +75,7 @@
     </div>
   </div>
   <div class="social-proof">
-    <div class="avatar">JD</div>
-    <div class="avatar">MK</div>
-    <div class="avatar">AL</div>
-    <div class="avatar">+12</div>
+    <div class="avatar">JD</div><div class="avatar">MK</div><div class="avatar">AL</div><div class="avatar">+12</div>
     <span style="color:#888; margin-left:0.5rem;">Trusted by Commander players</span>
   </div>
   <footer> 2026 DreamLedger  Built by Cortex</footer>
@@ -161,15 +94,12 @@
     particlesContainer.appendChild(p);
   }
 
-  // Stripe Checkout
-  const stripe = Stripe('pk_live_51SxTZREz6mf0OjVP4QbPVQIeMGxV0izqTINNcvwfacaDbp8krkfRlncebEedURiFG2WaqJMW3aRIDAC37XpxFJdh009mqc008D');
-  const checkoutButton = document.getElementById('checkout-button');
-  checkoutButton.addEventListener('click', async () => {
-    // Use existing payment link or dynamic session
+  // Stripe Checkout  redirect to the payment link
+  document.getElementById('checkout-button').addEventListener('click', () => {
     window.location.href = 'https://buy.stripe.com/5kQ6oH0hK4lD62qam76c00y';
   });
 
-  // Fake ticker
+  // Simulated social proof ticker
   setTimeout(() => {
     const ticker = document.getElementById('ticker');
     ticker.style.display = 'block';
